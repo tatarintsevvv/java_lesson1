@@ -4,83 +4,86 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        initializeVariables();
-        greatings("Ольга");
-        double d = calculateFormula1(1.1, 2.2, 3.3, 4.4);
-        boolean b = checkFromTenToTwenty(5, 7);
-        checkPositive((0));
-        b = checkNegative(0);
-        checkLeapYear(2020);
     }
 
-    // создаю и инициализирую пройденные переменные
-    public static void initializeVariables() {
-        byte b =0;
-        short sh = 1;
-        int i = 10;
-        long l = 15;
+    // функция создает массив из нулей и единиц и заменяет их друг другом
+    public static void revertZeroAndOnes() {
+        int[] arr = {
+            1, 1, 0, 0, 1, 0, 1, 1, 0, 0
+        };
 
-        float f = 0.1F;
-        double d = 1.1;
-
-        char c = 'f';
-        String s = "String";
-        boolean boo = true;
-    }
-
-    public static double calculateFormula1(double a, double b, double c, double d) {
-        return a * (b + (c / d));
-    }
-
-    // возвращает true если сумма чисел лежит в промежутке от 10 до 20
-    public static boolean checkFromTenToTwenty(int a, int b) {
-        boolean result = false;
-        int sum = a + b;
-        if((sum >= 10) && (sum <= 20)) {
-            result = true;
-        }
-        return result;
-    }
-
-    // метод должен напечатать в консоль положительное ли число передали, или отрицательное;
-    // ноль считаем положительным числом.
-    public static void checkPositive(int x) {
-        if(x >= 0) {
-            System.out.println("Положительное число");
-        } else {
-            System.out.println("Отрицательное число");
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == 0) {
+                arr[i] = 1;
+            } else if(arr[i] == 1) {
+                arr[i] = 0;
+            }
         }
     }
 
-    // метод должен вернуть true, если число отрицательное
-    public static boolean checkNegative(int x) {
-        boolean result = false;
-        if(x < 0) {
-            result = true;
-        }
-        return result;
-    }
-
-    // метод выводит приветствие
-    public static void greatings(String s) {
-        System.out.println("Привет, " + s + "!");
-    }
-
-    // метод, который определяет является ли год високосным, и выводит сообщение в консоль.
-    // Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный
-    public static void checkLeapYear(int year) {
-        boolean b = false;
-        if(year % 400 == 0) {
-            b = true;
-        } else if(year % 100 == 0) {
-        } else if(year % 4 == 0) {
-            b = true;
-        }
-        if(b) {
-            System.out.println(year + " високосный год");
-        } else {
-            System.out.println(year + " не високосный год");
+    // Задать пустой целочисленный массив размером 8. С помощью цикла заполнить его
+    // значениями 0 3 6 9 12 15 18 21
+    public static void fillArray() {
+        int[] arr = new int[8];
+        for(int i = 0; i < 8; i++) {
+            arr[i] = 3 * i;
         }
     }
 
+    // Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом,
+    // и числа меньшие 6 умножить на 2
+    public static void operateArray() {
+        int[] arr = {
+                1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1
+        };
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] < 6) {
+                arr[i] *= 2;
+            }
+        }
+    }
+
+    // Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
+    // и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
+    public static void createSquareArray() {
+        int[][] arr = new int[6][6];
+        for(int i=0; i < arr.length; i++) {
+            for(int i1 = 0; i1 < arr[i].length; i1++) {
+                if(i == i1) {
+                    arr[i][i1] = 1;
+                }
+            }
+        }
+    }
+
+    // Задать одномерный массив и найти в нем минимальный и максимальный элементы (без
+    // помощи интернета
+    public static void findMaxAndMin() {
+        int[] arr = {
+                5, 12, 2, 99, 33, 12, 54, 6, 76, 49
+        };
+        int minValue = arr[0];
+        int maxValue = arr[0];
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] < minValue) {
+                minValue = arr[i];
+            }
+            if(arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+        }
+        System.out.println("Максимальное значение: " + maxValue);
+        System.out.println("Минимальное значение: " + minValue);
+    }
+
+    // Написать метод, в который передается не пустой одномерный целочисленный массив,
+    // метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой
+    // части массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true,
+    // checkBalance([1, 1, 1, || 2, 1]) → true, граница показана символами ||,
+    // эти символы в массив не входят.
+    public static void findEqualiser(int[] arr) {
+        // пускаем суммирование с начала и конца массива, добавляем к сумме элемент с той стороны
+        // c какой сумма меньше, если суммы одинаковы добавляем с обеих сторон
+    }
 }
+
