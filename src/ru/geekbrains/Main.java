@@ -1,9 +1,25 @@
 package ru.geekbrains;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        createSquareArray();
+        int[] arr = {
+                2, 2, 2, 1, 2, 2, 10, 1
+        };
+        boolean b = checkBalance(arr);
+        System.out.println(b);
+        int[] arr1 = {
+                1, 2, 3, 4, 5, 6, 7, 8, 9
+        };
+        b = checkBalance(arr1);
+        System.out.println(b);
+
+        shiftArray(arr1, -6);
     }
 
     // функция создает массив из нулей и единиц и заменяет их друг другом
@@ -48,11 +64,12 @@ public class Main {
     public static void createSquareArray() {
         int[][] arr = new int[6][6];
         for(int i=0; i < arr.length; i++) {
-            for(int i1 = 0; i1 < arr[i].length; i1++) {
-                if(i == i1) {
-                    arr[i][i1] = 1;
-                }
-            }
+            arr[i][i] = 1;
+            arr[i][arr.length - i - 1] = 1;
+        }
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print(Arrays.toString(arr[i]) + " ");
+            System.out.println();
         }
     }
 
@@ -81,9 +98,104 @@ public class Main {
     // части массива равны. Примеры: checkBalance([2, 2, 2, 1, 2, 2, || 10, 1]) → true,
     // checkBalance([1, 1, 1, || 2, 1]) → true, граница показана символами ||,
     // эти символы в массив не входят.
-    public static void findEqualiser(int[] arr) {
+    public static boolean checkBalance(int[] arr) {
         // пускаем суммирование с начала и конца массива, добавляем к сумме элемент с той стороны
         // c какой сумма меньше, если суммы одинаковы добавляем с обеих сторон
+        if(arr.length < 2) {
+            return false;
+        }
+        int leftSum = 0;
+        int rightSum = 0;
+        int leftIndex = -1;
+        int rightIndex = arr.length;
+        while(true) {
+            if(leftSum == rightSum) {
+                leftIndex += 1;
+                rightIndex -= 1;
+                leftSum += arr[leftIndex];
+                rightSum += arr[rightIndex];
+            } else if(leftSum < rightSum) {
+                leftIndex += 1;
+                leftSum += arr[leftIndex];
+            } else if(rightSum < leftSum) {
+                rightIndex -= 1;
+                rightSum += arr[rightIndex];
+            }
+            // ставим проверку, что левый индекс на единицу меньше и суммы равны, в этом случае true
+            if((leftIndex + 1) == rightIndex) {
+                if(leftSum == rightSum) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            // если левый индекс равен или больше (излишняя проверка) правого, то false
+            if(leftIndex >= rightIndex) {
+                return false;
+            }
+        }
+    }
+
+
+    // Написать метод, которому на вход подается одномерный массив и число n (может быть положительным, или
+    // трицательным), при этом метод должен сместить все элементымассива на n позиций. Для усложнения задачи нельзя
+    // пользоваться вспомогательными массивами.
+    public static void shiftArray(int[] arr, int n) {
+        if(n == 0)
+            return;
+
+        System.out.println(Arrays.toString(arr));
+
+        // для случая n > длины массива находим целочисленный остаток, это и будет реальной сдвигом,
+        // чтобы не гонять массив несколько раз
+        int shift = n % arr.length;
+        if(shift == 0)
+            return;
+
+        // для положительного n (сдвиг вправо) начинаем с первого элемента массива
+        int begin = 0;
+        // для отрицательного с последнего элемента массива
+        if(n < 0) {
+            begin = arr.length - 1;
+        }
+
+        // здесь используется некий финт для продолжения цикличности, вызванный тем, что если количество элементов
+        // массива делится нацело, то нужно подключать дополнительные цепочки смещения, которые зависят от остатка деления
+        // нацело
+        int ticks = arr.length % shift;
+        if(ticks == 0) {
+            ticks = shift;
+            if(shift < 0) {
+                ticks = -1 * ticks;
+            }
+        }
+
+        int tempIndex;
+        for(int i = 0; i < ticks; i++){
+            if(shift > 0) {
+                begin++;
+            } else {
+                begin--;
+            }
+            int next = begin;
+            int tempValue = arr[next];
+            int prevValue = arr[next];
+
+            do {
+//            tempIndex = next;
+                if (((next + shift) >= 0) && ((next + shift) <= (arr.length - 1))) {
+                    next += shift;
+                } else if (shift > 0) {
+                    next = arr.length - next - shift;
+                } else if (shift < 0) {
+                    next = arr.length + next + shift;
+                }
+                tempValue = arr[next];
+                arr[next] = prevValue;
+                prevValue = tempValue;
+            } while (next != begin);
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
 
