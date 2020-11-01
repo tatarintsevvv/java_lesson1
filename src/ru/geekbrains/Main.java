@@ -18,6 +18,8 @@ public class Main {
         animals[1] = dog;
         animals[2] = shortDog;
         animals[3] = longDog;
+        // запуск метода, могут ли пробежать 450 метров
+        // для лучшего запоминания применид instanseof, хотя здесь это и избыточно
         for (int i = 0; i < animals.length; i++) {
             if(animals[i] instanceof Animal) {
                 boolean res = animals[i].canRun(450);
@@ -28,6 +30,7 @@ public class Main {
                 }
             }
         }
+        // вывожу задание из методички о количестве созданных котов и собак
         System.out.println("Собак создано: " + Dog.countOfDogs);
         System.out.println("Котов создано: " + Cat.countOfCats);
     }
