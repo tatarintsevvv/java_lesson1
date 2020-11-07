@@ -1,7 +1,11 @@
 package ru.geekbrains;
 
-//Создать массив из 5 сотрудников
-//        * С помощью цикла вывести информацию только о сотрудниках старше 40 лет
+//Расширить задачу про котов и тарелки с едой.
+//        Сделать так, чтобы в тарелке с едой не могло получиться отрицательного количества еды (например, в миске 10 еды, а кот пытается покушать 15-20).
+//        Каждому коту нужно добавить поле сытость (когда создаем котов, они голодны). Если коту удалось покушать (хватило еды), сытость = true.
+//        Считаем, что если коту мало еды в тарелке, то он её просто не трогает, то есть не может быть наполовину сыт (это сделано для упрощения логики программы).
+//        Создать массив котов и тарелку с едой, попросить всех котов покушать из этой тарелки и потом вывести информацию о сытости котов в консоль.
+//        Добавить в тарелку метод, с помощью которого можно было бы добавлять еду в тарелку.
 
 
 public class Main {
@@ -9,30 +13,24 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         // создаю кошек
-        Cat cat = new Cat(200, 2.0, 0);
-        Dog dog = new Dog(500, 0.5, 10);
-        Dog shortDog = new Dog(400, 0.5, 10);
-        Dog longDog = new Dog(600, 0.5, 10);
-        Animal[] animals = new Animal[4];
-        animals[0] = cat;
-        animals[1] = dog;
-        animals[2] = shortDog;
-        animals[3] = longDog;
-        // запуск метода, могут ли пробежать 450 метров
-        // для лучшего запоминания применид instanseof, хотя здесь это и избыточно
-        for (int i = 0; i < animals.length; i++) {
-            if(animals[i] instanceof Animal) {
-                boolean res = animals[i].canRun(450);
-                if(res) {
-                    System.out.println("result:run:true");
-                } else {
-                    System.out.println("result:run:false");
-                }
+        Cat[] cats = new Cat[5];
+        cats[0] = new Cat("Barsik", 5);
+        cats[1] = new Cat("Murzik", 10);
+        cats[2] = new Cat("Kisik", 5);
+        cats[3] = new Cat("Fiksik", 5);
+        cats[4] = new Cat("Fed'ka", 5);
+        Plate plate = new Plate(15);
+        plate.info();
+        plate.info();
+        for (int i = 0; i < cats.length; i++) {
+            cats[i].eat(plate);
+            if(cats[i].isSatiety()) {
+                System.out.println("Кот " + cats[i].getName() + " сыт");
+            } else {
+                System.out.println("Кот " + cats[i].getName() + " голоден");
             }
+
         }
-        // вывожу задание из методички о количестве созданных котов и собак
-        System.out.println("Собак создано: " + Dog.countOfDogs);
-        System.out.println("Котов создано: " + Cat.countOfCats);
     }
 }
 
