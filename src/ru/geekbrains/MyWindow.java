@@ -95,10 +95,6 @@ public class MyWindow extends JFrame {
                                 }
                             }
                         }
-
-                        // если флаг взведен, то открываю клетки с бомбами зеленым фоном
-                        if(!isAlive) {
-                        }
                     }
                 });
                 add(button);
