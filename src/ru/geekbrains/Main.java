@@ -11,26 +11,7 @@ package ru.geekbrains;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        // создаю кошек
-        Cat[] cats = new Cat[5];
-        cats[0] = new Cat("Barsik", 5);
-        cats[1] = new Cat("Murzik", 10);
-        cats[2] = new Cat("Kisik", 5);
-        cats[3] = new Cat("Fiksik", 5);
-        cats[4] = new Cat("Fed'ka", 5);
-        Plate plate = new Plate(15);
-        plate.info();
-        plate.info();
-        for (int i = 0; i < cats.length; i++) {
-            cats[i].eat(plate);
-            if(cats[i].isSatiety()) {
-                System.out.println("Кот " + cats[i].getName() + " сыт");
-            } else {
-                System.out.println("Кот " + cats[i].getName() + " голоден");
-            }
-
-        }
+        MyWindow myWindow = new MyWindow(5);
     }
 }
 
