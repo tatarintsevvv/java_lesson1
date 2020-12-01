@@ -2,69 +2,72 @@ package ru.geekbrains;
 
 import java.util.*;
 
-// 1. Напишите метод, на вход которого подается двумерный строковый массив размером 4х4, при подаче
-// массива другого размера необходимо бросить исключение MyArraySizeException.
-// 2. Далее метод должен пройтись по всем элементам массива, преобразовать в int, и просуммировать.
-// Если в каком-то элементе массива преобразование не удалось (например, в ячейке лежит символ или
-// текст вместо числа), должно быть брошено исключение MyArrayDataException – с детализацией, в какой
-// именно ячейке лежат неверные данные.
-// 3. В методе main() вызвать полученный метод, обработать возможные исключения MySizeArrayException
-// и MyArrayDataException и вывести результат расчета.
-class MyArraySizeException extends Exception {
-}
+// 1. Создать массив с набором слов (10-20 слов, среди которых должны встречаться повторяющиеся). Найти и вывести
+// список уникальных слов, из которых состоит массив (дубликаты не считаем). Посчитать, сколько раз встречается каждое
+// слово.
+// 2. Написать простой класс ТелефонныйСправочник, который хранит в себе список фамилий и телефонных номеров. В этот
+// телефонный справочник с помощью метода add() можно добавлять записи. С помощью метода get() искать номер телефона по
+// фамилии. Следует учесть, что под одной фамилией может быть несколько телефонов (в случае однофамильцев), тогда при
+// запросе такой фамилии должны выводиться все телефоны.
 
-class MyArrayDataException extends Exception {
-    private int row;
-    private int column;
-    public MyArrayDataException(int row, int column) {
-        this.row = row;
-        this.column = column;
-    }
-
-    @Override
-    public String toString() {
-        return "Не число в " + row + " строке и " + column + " столбце";
-    }
-}
 class Main {
     public static void main(String args[]) {
-        final String[][] arr = {
-                {"1", "1", "1", "1"},
-                {"2", "2", "c", "2"},
-                {"3", "3", "3", "3"},
-                {"4", "4", "4", "4"}
+        final String[] arr = {
+                "Robot1",
+                "Robot2",
+                "Robot3",
+                "Robot4",
+                "Robot5",
+                "Robot1",
+                "Robot6",
+                "Robot1",
+                "Robot7",
+                "Robot3",
+                "Robot8",
+                "Robot9",
+                "Robot10",
+                "Robot7",
+                "Robot11",
         };
-        try {
-            task1(arr);
-        } catch(MyArraySizeException e) {
-            System.out.println("Array has not 4x4 dimensions");
-        } catch(MyArrayDataException e) {
-            System.out.println(e.toString());
+        HashSet<String> set = new HashSet<>();
+        for (String str: arr) {
+            set.add(str);
         }
-    }
-
-    // метод выполняетзадачу 1.4
-    public static void task1(String[][] arr) throws MyArraySizeException, MyArrayDataException {
-        if(arr.length != 4) {
-            throw new MyArraySizeException();
-        }
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i].length != 4) {
-                throw new MyArraySizeException();
-            }
-        }
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                try {
-                    sum += Integer.parseInt(arr[i][j]);
-                } catch(NumberFormatException e) {
-                    throw new MyArrayDataException(i, j);
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext()) {
+            String temp = (String)iterator.next();
+            int count = 0;
+            for (int i = 0; i < arr.length; i++) {
+                if(arr[i].equals(temp)) {
+                    count++;
                 }
             }
+            System.out.println(temp + " встречается " + count + " раз");
         }
-        System.out.println("Сумма = " + sum);
+
+        // теперь задание 3.2
+        PhoneBook book = new PhoneBook();
+        book.add("Robot", "+7(911)111-11-11");
+        book.add("Cat", "+7(911)111-11-12");
+        book.add("Wilson", "+7(911)111-11-13");
+        book.add("Wall", "+7(911)111-11-14");
+        book.add("Nelson", "+7(911)111-11-15");
+        book.add("Treadmill", "+7(911)111-11-16");
+        book.add("Human", "+7(911)111-11-17");
+        book.add("Wilson", "+7(911)111-11-18");
+        book.add("Nelson", "+7(911)111-11-19");
+        book.add("Brown", "+7(911)111-11-21");
+
+        String lastName = "Wilson";
+        ArrayList<String> list = book.get(lastName);
+        if(list.isEmpty()) {
+            System.out.println(lastName + " without phone");
+        } else {
+            System.out.println(lastName + " with phone(s):");
+            iterator = list.iterator();
+            while(iterator.hasNext()) {
+                System.out.println(iterator.next());
+            }
+        }
     }
-
-
 }
