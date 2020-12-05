@@ -6,153 +6,26 @@ class Main {
     public static void main(String args[]) {
         long nanoStartTime, nanoEndTime;
 
-        // задача 3.1
-        List<Integer> list = task1();
+        // задача 4.1
+        task4_1();
 
-        // задача 3.2
-        task2(list);
+        // задача 4.2
+        task4_2();
 
-        // задача 3.3
-        task3();
+        // задача 4.3
+        task4_3();
 
-        // задача 3.4
-        task4();
+        // задача 4.4
+        task4_4();
 
-        // задача 3.5
-        task5();
-
-
+        // задача 4.5
+        task4_5();
     }
 
-    // метод выполняетзадачу 3.4
-    public static void task4() {
-        // создаю массиву из задачи 2.1
-        Integer[] arr;
-        arr = new Integer[10];
-
-        // инициализация массива
-        Random rand = new Random();
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = rand.nextInt(15);
-        }
-
-        long nanoStartTime, nanoEndTime;
-
-        nanoStartTime = System.nanoTime();
-        LinkedList<Integer> list = new LinkedList<>();
-        int index = 0;
-        for(Integer val: arr) {
-            list.add(index, val);
-            ++index;
-        }
-        nanoEndTime = System.nanoTime();
-        System.out.println("Преобразование массива в двусвязный список прошло за " + (nanoEndTime - nanoStartTime));
-
-        // операции с двусвязным списком
-        // добавление элемента в список
-        nanoStartTime = System.nanoTime();
-        list.add(20);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer добавлен в двусвязный список за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Двуосвязный список после добавления элемента: " + list.toString());
-
-        // установка элемента в списке на позиции 5
-        nanoStartTime = System.nanoTime();
-        list.set(5, 30);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer установлен в двусвязном списке за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Двусвязный список после изменения элемента: " + list.toString());
-
-
-        // получение элемента списка на позиции 5
-        nanoStartTime = System.nanoTime();
-        list.get(5);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer получен из двусвязного списка за " + (nanoEndTime - nanoStartTime));
-
-        // удаление из списка элемента с позиции 5
-        nanoStartTime = System.nanoTime();
-        list.remove(5);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer получен из двусвязного списка за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Двусвязный список после удаления элемента: " + list.toString());
-    }
-
-    // метод выполняет задачу 3.1
-    public static List<Integer> task1() {
-        // создаю массиву из задачи 2.1
-        Integer[] arr;
-        arr = new Integer[10];
-
-        // инициализация массива
-        Random rand = new Random();
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = rand.nextInt(15);
-        }
-
-        long nanoStartTime, nanoEndTime;
-
-        nanoStartTime = System.nanoTime();
-        List<Integer> list = Arrays.asList(arr);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Преобразование массива в список прошло за " + (nanoEndTime - nanoStartTime));
-
-        nanoStartTime = System.nanoTime();
-        Collection<Integer> collection = Arrays.asList(arr);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Преобразование массива в коллекцию прошло за " + (nanoEndTime - nanoStartTime));
-
-        return list;
-    }
-
-    // метод выполняет задачу 3.2
-    public static void task2(List<Integer> l) {
-        List<Integer> list = l;
-        int searchValue = 5;
-        long nanoStartTime, nanoEndTime;
-        System.out.println("Список до  добавления элемента: " + list.toString());
-
-        /*
-        здесь вываливается исключение
-        // добавление элемента в список
-        nanoStartTime = System.nanoTime();
-        Integer valueAdd = 20;
-        list.add(0,valueAdd);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer добавлен в список за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Список после добавления элемента: " + list.toString());
-        */
-
-        // установка элемента в списке на позиции 5
-        nanoStartTime = System.nanoTime();
-        list.set(5, 30);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer установлен в списке за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Список после изменения элемента: " + list.toString());
-
-
-        // получение элемента списка на позиции 5
-        nanoStartTime = System.nanoTime();
-        list.get(5);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer получен из списка за " + (nanoEndTime - nanoStartTime));
-
-        // удаление из списка элемента с позиции 5
-        /*
-        здесь вываливается исключение
-        nanoStartTime = System.nanoTime();
-        Integer value = 30;
-        list.remove((Object)value);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Список после удаления элемента: " + list.toString());
-         */
-    }
-
-    // метод выполняет задачу 3.3
-    public static void task3() {
+    // метод выполняетзадачу 4.1
+    public static void task4_1() {
         // создаю массив из задачи 2.1
-        Integer[] arr;
-        arr = new Integer[10];
+        int[] arr = new int[15];
 
         // инициализация массива
         Random rand = new Random();
@@ -161,73 +34,29 @@ class Main {
         }
 
         long nanoStartTime, nanoEndTime;
-
+        SimpleStack stack = new SimpleStack(arr.length);
+        // провожу заполнение стека согласно сформированного массива
         nanoStartTime = System.nanoTime();
-        SimpleLinkedList<Integer> list = new SimpleLinkedList<>();
-        int index = 0;
-        for(Integer val: arr) {
-            list.add(val, index);
-            ++index;
+        for (int num: arr) {
+            if(!stack.isFull())
+                stack.push(num);
         }
         nanoEndTime = System.nanoTime();
-        System.out.println("Преобразование массива в односвязный список прошло за " + (nanoEndTime - nanoStartTime));
+        System.out.println("Простой стек заполнен из массива 15 целых за " + (nanoEndTime - nanoStartTime));
 
-        // операции с односвязным списком
-        // добавление элемента в список
+        // провожу поэлементное очищение стека
         nanoStartTime = System.nanoTime();
-        list.add(20, 7);
+        while(!stack.isEmpty()) {
+            int elem = stack.pop();
+        }
         nanoEndTime = System.nanoTime();
-        System.out.println("Integer добавлен в односвязный список за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Односвязный список после добавления элемента: " + list.toString());
-
-        // установка элемента в списке на позиции 5
-        nanoStartTime = System.nanoTime();
-        list.set(5, 30);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer установлен в односвязном списке за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Односвязный список после изменения элемента: " + list.toString());
-
-
-        // получение элемента списка на позиции 5
-        nanoStartTime = System.nanoTime();
-        list.get(5);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer получен из односвязного списка за " + (nanoEndTime - nanoStartTime));
-
-        // удаление из списка элемента с позиции 5
-        nanoStartTime = System.nanoTime();
-        list.remove(5);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Integer получен из односвязного списка за " + (nanoEndTime - nanoStartTime));
-        System.out.println("Односвязный список после удаления элемента: " + list.toString());
-
-        // создаю коллекцию из задания 1.3
-        LinkedList<MyWindow> listCustom = new LinkedList<>();
-        listCustom.add(new MyWindow("Robo1", 20));
-        listCustom.add(new MyWindow("Robo2", 21));
-        listCustom.add(new MyWindow("Robo3", 22));
-        listCustom.add(new MyWindow("Robo4", 23));
-        listCustom.add(new MyWindow("Robo5", 24));
-
-        nanoStartTime = System.nanoTime();
-        listCustom.set(1,new MyWindow("Set", 25));
-        nanoEndTime = System.nanoTime();
-        System.out.println("Односвязный список после изменения элемента: " + list.toString());
-
-        nanoStartTime = System.nanoTime();
-        list.get(2);
-        nanoEndTime = System.nanoTime();
-        System.out.println("Обьект получен из односвязного списка за " + (nanoEndTime - nanoStartTime));
-
-
+        System.out.println("Простой стек очищен за " + (nanoEndTime - nanoStartTime));
     }
 
-
-    // заджание 3.5, сортировка методом выбора
-    public static void task5() {
+    // метод выполняетзадачу 4.2
+    public static void task4_2() {
         // создаю массив из задачи 2.1
-        Integer[] arr;
-        arr = new Integer[10];
+        int[] arr = new int[15];
 
         // инициализация массива
         Random rand = new Random();
@@ -235,40 +64,151 @@ class Main {
             arr[i] = rand.nextInt(15);
         }
 
-        // создаю и инициализирую двухсвязный список из созданного массива
-        LinkedList<Integer> list = new LinkedList<>();
-        int index = 0;
-        for(Integer val: arr) {
-            list.add(index, val);
-            ++index;
+        long nanoStartTime, nanoEndTime;
+        SimpleQueue queue = new SimpleQueue(arr.length);
+        // провожу заполнение очереди согласно сформированного массива
+        nanoStartTime = System.nanoTime();
+        for (int num: arr) {
+            if(!queue.isFull())
+                queue.push(num);
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Простая очередь заполнена из массива 15 целых за " + (nanoEndTime - nanoStartTime));
+
+        // провожу поэлементное очищение очереди
+        nanoStartTime = System.nanoTime();
+        while(!queue.isEmpty()) {
+            int elem = queue.pop();
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Простая очередь очищена за " + (nanoEndTime - nanoStartTime));
+    }
+
+    // метод выполняетзадачу 4.3
+    public static void task4_3() {
+        // создаю массив из задачи 2.1
+        int[] arr = new int[15];
+
+        // инициализация массива
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(15);
         }
 
         long nanoStartTime, nanoEndTime;
-
+        SimpleDeque deque = new SimpleDeque(arr.length);
+        // провожу заполнение очереди согласно сформированного массива
         nanoStartTime = System.nanoTime();
-        Iterator iterator = list.iterator();
-        while(iterator.hasNext()) {
-            System.out.println(iterator.next());
+        for (int num: arr) {
+            if(!deque.isFull())
+                deque.pushLast(num);
         }
         nanoEndTime = System.nanoTime();
-        System.out.println("Создание итератора, проход по нему и вывод элементов прошло за " + (nanoEndTime - nanoStartTime));
+        System.out.println("Дек заполнен вставкой в конце из массива 15 целых за " + (nanoEndTime - nanoStartTime));
 
-        // создаю коллекцию из задания 1.3
-        LinkedList<MyWindow> listCustom = new LinkedList<>();
-        listCustom.add(new MyWindow("Robo1", 20));
-        listCustom.add(new MyWindow("Robo2", 21));
-        listCustom.add(new MyWindow("Robo3", 22));
-        listCustom.add(new MyWindow("Robo4", 23));
-        listCustom.add(new MyWindow("Robo5", 24));
-
+        // провожу поэлементное очищение очереди
         nanoStartTime = System.nanoTime();
-        iterator = listCustom.iterator();
-        while(iterator.hasNext()) {
-            System.out.println(iterator.next().toString());
+        while(!deque.isEmpty()) {
+            int elem = deque.popLast();
         }
         nanoEndTime = System.nanoTime();
-        System.out.println("Создание итератора, проход по нему и вывод элементов прошло за " + (nanoEndTime - nanoStartTime));
+        System.out.println("Дек очищен выборкой сзади за " + (nanoEndTime - nanoStartTime));
 
+        nanoStartTime = System.nanoTime();
+        for (int num: arr) {
+            if(!deque.isFull())
+                deque.pushFront(num);
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Дек заполнен вставкой спереди из массива 15 целых за " + (nanoEndTime - nanoStartTime));
+
+        // провожу поэлементное очищение очереди
+        nanoStartTime = System.nanoTime();
+        while(!deque.isEmpty()) {
+            int elem = deque.popFront();
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Дек очищен выборкой спереди за " + (nanoEndTime - nanoStartTime));
+    }
+
+    // метод выполняетзадачу 4.4
+    public static void task4_4() {
+        // создаю массив из задачи 2.1
+        Integer[] arr = new Integer[15];
+
+        // инициализация массива
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(15);
+        }
+
+        long nanoStartTime, nanoEndTime;
+        SimplePriorityQueue<Integer> queue = new SimplePriorityQueue<>(arr.length);
+        // провожу заполнение очереди согласно сформированного массива
+        nanoStartTime = System.nanoTime();
+        for (Integer num: arr) {
+            if(!queue.isFull())
+                queue.push(num);
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Приоритетная очередь заполнена вставкой в конце из массива 15 Integer за " + (nanoEndTime - nanoStartTime));
+
+        // провожу поэлементное очищение очереди
+        nanoStartTime = System.nanoTime();
+        while(!queue.isEmpty()) {
+            Integer elem = queue.pop();
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Приоритетная очередь очищена выборкой сзади за " + (nanoEndTime - nanoStartTime));
+    }
+
+    // метод выполняетзадачу 4.5
+    public static void task4_5() {
+        // создаю массив из задачи 2.1
+        Integer[] arr = new Integer[15];
+
+        // инициализация массива
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(15);
+        }
+
+        long nanoStartTime, nanoEndTime;
+        CustomQueue<Integer> queue = new CustomQueue<>();
+        CustomStack<Integer> stack = new CustomStack<>();
+
+        // провожу заполнение стека согласно сформированного массива
+        nanoStartTime = System.nanoTime();
+        for (Integer num: arr) {
+            stack.push(num);
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Стэк заполнен из массива 15 Integer за " + (nanoEndTime - nanoStartTime));
+
+        // провожу поэлементное очищение очереди
+        nanoStartTime = System.nanoTime();
+        while(!stack.isEmpty()) {
+            Integer elem = stack.pop();
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Стэк очищен за " + (nanoEndTime - nanoStartTime));
+
+        // провожу заполнение очереди согласно сформированного массива
+        nanoStartTime = System.nanoTime();
+        for (Integer num: arr) {
+            queue.push(num);
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Очередь заполнена из массива 15 Integer за " + (nanoEndTime - nanoStartTime));
+
+        // провожу поэлементное очищение очереди
+        nanoStartTime = System.nanoTime();
+        while(!queue.isEmpty()) {
+            Integer elem = queue.pop();
+        }
+        nanoEndTime = System.nanoTime();
+        System.out.println("Очередь очищена сзади за " + (nanoEndTime - nanoStartTime));
 
     }
+
 }
