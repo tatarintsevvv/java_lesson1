@@ -19,8 +19,6 @@ public class ChatWindow extends JFrame {
         container.setLayout(layout);
 
         // панель отображения чата
-//        JTextPane chat = new JPane("Многострочное поле");
-//        JLabel chat = new JLabel("Многострочное поле");
         ChatPanel chat = new ChatPanel();
         JScrollPane scrollPane = new JScrollPane(chat);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -36,18 +34,6 @@ public class ChatWindow extends JFrame {
             if(!text.isEmpty() && !text.isBlank()) {
                 chat.addString(text);
                 chat.repaint();
-                /*
-                Dimension dim = chat.getPreferredSize();
-                Dimension realDim = chat.getSize();
-                if((realDim.height > dim.height) || (realDim.width > dim.width)) {
-                    dim.height = Math.max(realDim.height, dim.height);
-                    dim.width = Math.max(realDim.width, dim.width);
-                    chat.setPreferredSize(dim);
-                    chat.revalidate();
-                    scrollPane.repaint();
-                }
-*/
-//                scrollPane.repaint();
             } else {
                 JOptionPane.showMessageDialog(
                         container,
