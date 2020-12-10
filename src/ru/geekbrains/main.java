@@ -9,113 +9,54 @@ package ru.geekbrains;
 // фамилии. Следует учесть, что под одной фамилией может быть несколько телефонов (в случае однофамильцев), тогда при
 // запросе такой фамилии должны выводиться все телефоны.
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 class Main {
+    static final int SIZE = 10000000;
+    static final int HALF = SIZE / 2;
+
     public static void main(String args[]) {
 
-        // задача 5.4
-        long startTime , endTime;
+        methodWithoutThreads();
 
-        startTime = System.nanoTime();
-        RecursiveMethod(0);
-        endTime = System.nanoTime();
-        System.out.println("Рекурсия сработала за " + (endTime - startTime));
+        methodWithThreads();
+    }
 
-        startTime = System.nanoTime();
-        for (int i = 0; i <100; i++) {
+    public static void methodWithoutThreads() {
+        float[] arr = new float[SIZE];
 
-        }
-        endTime = System.nanoTime();
-        System.out.println("Цикл сработал за " + (endTime - startTime));
-
-        // задача 5.5
-        Random random = new Random();
-        int[] arr = new int[15];
+        Arrays.fill(arr, 1.f);
+        long startTimeMills = System.currentTimeMillis();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(15);
+            arr[i] = (float) (arr[i] * Math.sin(0.2f + i/5) * Math.cos(0.2f + i/5) *
+                    Math.cos(0.4f + i/2));
         }
-        Arrays.sort(arr);
-
-        // рекурсивный поиск
-        int index = arr.length;
-        startTime = System.nanoTime();
-        index = RecursiveBinarySearch(arr, 4, 0, arr.length - 1);
-        endTime = System.nanoTime();
-        System.out.println("Рекурсия сработала за " + (endTime - startTime));
-
-        index = arr.length;
-        startTime = System.nanoTime();
-        index = Arrays.binarySearch(arr, 4);
-        endTime = System.nanoTime();
-        System.out.println("Стандартный поиск сработал за " + (endTime - startTime));
-
-        // задача 5.6
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(15);
-        }
-
-        // рекурсивная сортировка методом замещения
-        index = arr.length;
-        startTime = System.nanoTime();
-        sortMerge(Arrays.copyOf(arr, arr.length));
-        endTime = System.nanoTime();
-        System.out.println("Рекурсивнкая сортировка методом замещения сработала за " + (endTime - startTime));
-
-        // стандартная сортировка
-        index = arr.length;
-        startTime = System.nanoTime();
-        Arrays.sort(Arrays.copyOf(arr, arr.length));
-        endTime = System.nanoTime();
-        System.out.println("Стандартная сортировка сработалв за " + (endTime - startTime));
-
+        System.out.println("Время работы метода без потоков " + (System.currentTimeMillis() - startTimeMills));
 
     }
 
-    public static int[] sortMerge(int[] arr) {
-        int len = arr.length;
-        if(len < 2)
-            return arr;
-        int middle = len/2;
-        return merge(sortMerge(Arrays.copyOfRange(arr, 0, middle)),
-                sortMerge(Arrays.copyOfRange(arr, middle, len)));
+    public static void methodWithThreads() {
+        float[] arr = new float[SIZE];
+        float[] arr1, arr2;
+        arr1 = new float[HALF];
+        arr2 = new float[HALF];
+        Arrays.fill(arr, 1.f);
+        long startTimeMills = System.currentTimeMillis();
+        System.arraycopy(arr, 0, arr1, 0, HALF);
+        System.arraycopy(arr, HALF, arr2, 0, HALF);
+        Thread1 thread1 = new Thread1(arr1);
+        Thread1 thread2 = new Thread1(arr2);
+        thread1.start();
+        thread2.start();
+        try {
+            thread1.join();
+            thread2.join();
+        } catch(InterruptedException e) {}
+        // делаем обратную склейку
+        System.arraycopy(arr1, 0, arr, 0, HALF);
+        System.arraycopy(arr2, 0, arr, HALF, HALF);
+        System.out.println("Время работы метода с потоками " + (System.currentTimeMillis() - startTimeMills));
+
     }
 
-    public static int[] merge(int[] a, int[] b) {
-        int[] result = new int[a.length + b.length];
-        int aIndex = 0;
-        int bIndex = 0;
-
-
-        for (int i = 0; i < result.length; i++) {
-            result[i] = a[aIndex] < b[bIndex] ? a[aIndex++] : b[bIndex++];
-            if(aIndex == a.length) {
-                System.arraycopy(b, bIndex, result, ++i, b.length - bIndex);
-            }
-            if(bIndex == b.length) {
-                System.arraycopy(a, aIndex, result, ++i, a.length - aIndex);
-            }
-        }
-        return result;
-    }
-
-    public static int RecursiveMethod(int num) {
-        if(num < 100)
-            return RecursiveMethod(num + 1);
-        else
-            return num;
-    }
-
-    public static int RecursiveBinarySearch(int[] arr, int searchValue, int low, int high) {
-        if(low > high)
-            return arr.length;
-        if(arr[low] == searchValue)
-            return low;
-        int index = (low + high)/2;
-        if(arr[index] > searchValue)
-            return RecursiveBinarySearch(arr, searchValue, index + 1, high);
-        else
-            return RecursiveBinarySearch(arr, searchValue, low, index);
-    }
 }
