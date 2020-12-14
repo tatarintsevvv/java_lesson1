@@ -12,51 +12,80 @@ package ru.geekbrains;
 import java.util.*;
 
 class Main {
-    static final int SIZE = 10000000;
-    static final int HALF = SIZE / 2;
 
     public static void main(String args[]) {
 
-        methodWithoutThreads();
+        long startTime, endTime;
 
-        methodWithThreads();
+        // 6.2
+        Person person1 = new Person("Robot1", 1, 25);
+        Person person2 = new Person("Robot2", 2, 35);
+        Person person3 = new Person("Robot3", 3, 45);
+        Person person4 = new Person("Robot4", 4, 55);
+
+        Tree tree = new Tree();
+        //6.3
+        tree.insert(person1);
+        tree.insert(person2);
+        tree.insert(person3);
+        tree.insert(person4);
+
+        startTime = System.nanoTime();
+        Node found = tree.find(2);
+        endTime = System.nanoTime();
+        System.out.println("Удаление прошло за " + (endTime - startTime));
+
+        // 6.4
+        startTime = System.nanoTime();
+        tree.directOrder(tree.getRoot());
+        endTime = System.nanoTime();
+        System.out.println("Прямой метод обхода прошел за " + (endTime - startTime));
+        startTime = System.nanoTime();
+        tree.backOrder(tree.getRoot());
+        endTime = System.nanoTime();
+        System.out.println("Обратный метод обхода прошел за " + (endTime - startTime));
+        startTime = System.nanoTime();
+        tree.inOrder(tree.getRoot());
+        endTime = System.nanoTime();
+        System.out.println("Симметричный метод обхода прошел за " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        Node minNode = tree.min();
+        endTime = System.nanoTime();
+        System.out.println("Поиск минимального значения прошел за " + (endTime - startTime));
+        startTime = System.nanoTime();
+        Node maxNode = tree.max();
+        endTime = System.nanoTime();
+        System.out.println("Поиск максимального значения прошел за " + (endTime - startTime));
+
+        // 6.5
+        startTime = System.nanoTime();
+        tree.delete(2);
+        endTime = System.nanoTime();
+        System.out.println("Удаление прошло за " + (endTime - startTime));
+
+
+        method_6_6();
+
     }
 
-    public static void methodWithoutThreads() {
-        float[] arr = new float[SIZE];
-
-        Arrays.fill(arr, 1.f);
-        long startTimeMills = System.currentTimeMillis();
+    public static void method_6_6() {
+        long startTime, endTime;
+        int[] arr = new int[20];
+        Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (float) (arr[i] * Math.sin(0.2f + i/5) * Math.cos(0.2f + i/5) *
-                    Math.cos(0.4f + i/2));
+            arr[i] = random.nextInt(25);
         }
-        System.out.println("Время работы метода без потоков " + (System.currentTimeMillis() - startTimeMills));
-
-    }
-
-    public static void methodWithThreads() {
-        float[] arr = new float[SIZE];
-        float[] arr1, arr2;
-        arr1 = new float[HALF];
-        arr2 = new float[HALF];
-        Arrays.fill(arr, 1.f);
-        long startTimeMills = System.currentTimeMillis();
-        System.arraycopy(arr, 0, arr1, 0, HALF);
-        System.arraycopy(arr, HALF, arr2, 0, HALF);
-        Thread1 thread1 = new Thread1(arr1);
-        Thread1 thread2 = new Thread1(arr2);
-        thread1.start();
-        thread2.start();
-        try {
-            thread1.join();
-            thread2.join();
-        } catch(InterruptedException e) {}
-        // делаем обратную склейку
-        System.arraycopy(arr1, 0, arr, 0, HALF);
-        System.arraycopy(arr2, 0, arr, HALF, HALF);
-        System.out.println("Время работы метода с потоками " + (System.currentTimeMillis() - startTimeMills));
-
+        int[] arr1 = Arrays.copyOf(arr, arr.length);
+        startTime = System.nanoTime();
+        Arrays.sort(arr1);
+        endTime = System.nanoTime();
+        System.out.println("Штатная сортировка прошла за " + (endTime - startTime));
+        MyHeap myHeap = new MyHeap();
+        startTime = System.nanoTime();
+        myHeap.sort(arr);
+        endTime = System.nanoTime();
+        System.out.println("Пирамидальная сортировка прошла за " + (endTime - startTime));
     }
 
 }
