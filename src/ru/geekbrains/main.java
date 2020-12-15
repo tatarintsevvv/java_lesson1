@@ -1,62 +1,49 @@
 package ru.geekbrains;
 
-
-// 1. Создать массив с набором слов (10-20 слов, среди которых должны встречаться повторяющиеся). Найти и вывести
-// список уникальных слов, из которых состоит массив (дубликаты не считаем). Посчитать, сколько раз встречается каждое
-// слово.
-// 2. Написать простой класс ТелефонныйСправочник, который хранит в себе список фамилий и телефонных номеров. В этот
-// телефонный справочник с помощью метода add() можно добавлять записи. С помощью метода get() искать номер телефона по
-// фамилии. Следует учесть, что под одной фамилией может быть несколько телефонов (в случае однофамильцев), тогда при
-// запросе такой фамилии должны выводиться все телефоны.
-
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.*;
 
 class Main {
-    static final int SIZE = 10000000;
-    static final int HALF = SIZE / 2;
-
+    public static int port = 8020;
     public static void main(String args[]) {
+        try  {
+            ServerSocket server = new ServerSocket(port);
+            System.out.println("ECHO-сервер начал работу на порте " + port);
 
-        methodWithoutThreads();
+            while(true) {
+                Socket socket = server.accept();
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            OutputStream output = socket.getOutputStream();
+                            PrintWriter pw = new PrintWriter(output, true);
+                            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                            String inputLine;
+                            while ((inputLine = br.readLine()) != null) {
+                                if (inputLine.equalsIgnoreCase("bye"))
+                                    break;
+                                pw.print("echo: " + inputLine);
+                            }
+                            br.close();
+                            pw.close();
+                            socket.close();
+                        } catch(IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
 
-        methodWithThreads();
-    }
+            }
 
-    public static void methodWithoutThreads() {
-        float[] arr = new float[SIZE];
-
-        Arrays.fill(arr, 1.f);
-        long startTimeMills = System.currentTimeMillis();
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (float) (arr[i] * Math.sin(0.2f + i/5) * Math.cos(0.2f + i/5) *
-                    Math.cos(0.4f + i/2));
+        } catch(IOException e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println("Работа ECHO-сервера завершена");
         }
-        System.out.println("Время работы метода без потоков " + (System.currentTimeMillis() - startTimeMills));
-
     }
 
-    public static void methodWithThreads() {
-        float[] arr = new float[SIZE];
-        float[] arr1, arr2;
-        arr1 = new float[HALF];
-        arr2 = new float[HALF];
-        Arrays.fill(arr, 1.f);
-        long startTimeMills = System.currentTimeMillis();
-        System.arraycopy(arr, 0, arr1, 0, HALF);
-        System.arraycopy(arr, HALF, arr2, 0, HALF);
-        Thread1 thread1 = new Thread1(arr1);
-        Thread1 thread2 = new Thread1(arr2);
-        thread1.start();
-        thread2.start();
-        try {
-            thread1.join();
-            thread2.join();
-        } catch(InterruptedException e) {}
-        // делаем обратную склейку
-        System.arraycopy(arr1, 0, arr, 0, HALF);
-        System.arraycopy(arr2, 0, arr, HALF, HALF);
-        System.out.println("Время работы метода с потоками " + (System.currentTimeMillis() - startTimeMills));
-
-    }
 
 }
