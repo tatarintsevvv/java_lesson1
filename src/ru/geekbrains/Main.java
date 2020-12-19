@@ -41,11 +41,13 @@ class Main {
         startTime = System.nanoTime();
         graph.DFS(0);
         graph.refreshVertixes();
+        endTime = System.nanoTime();
         System.out.println("Метод обхода в глубину прошёл за " + (endTime - startTime));
 
         // 7.4 добавить метод обхода в ширину
         startTime = System.nanoTime();
         graph.BDFS(0);
+        endTime = System.nanoTime();
         System.out.println("Метод обхода в глубину прошёл за " + (endTime - startTime));
 
 
