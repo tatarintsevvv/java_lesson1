@@ -1,0 +1,12 @@
+ClientApp.class
+ChatApiHandler.class
+AuthService.class
+ClientSignInWindow.class
+Client.class
+ClientSignInWindow$Callback.class
+ClientHandler.class
+Message.class
+ClientChatWindow$Callback.class
+ClientChatWindow.class
+Server.class
+ChatApiHandler$Callback.class
