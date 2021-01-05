@@ -23,41 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f761f61b-0e3f-4dde-bbd7-4fe19c3194c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GeekBrainsTasks.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ChatApiHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClientApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClientChatWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClientSignInWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/lesson.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_lesson1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Apple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Fruit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Fruitable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/NotEnoughFruitsInBoxToReplace.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Orange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_lesson1/ru/geekbrains/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/geekbrains/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1609787764651</updated>
     </task>
+    <task id="LOCAL-00001" summary="2 задание - поправки к сетевому чату">
+      <created>1609869042508</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609869042509</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +116,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2 задание - поправки к сетевому чату" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 задание - поправки к сетевому чату" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1609788166855">
       <screen x="0" y="0" width="1366" height="728" />
@@ -155,42 +133,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609841684215" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1609868735429">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1609868941529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609868735429" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1609868735428">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609868941529" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1609868941528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609868735428" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1609868735428">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609868941528" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1609868941528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609868735428" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1609868735428">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609868941528" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1609868941529">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609868735428" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1609868730548">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609868941529" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1609868927963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609868730548" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1609868730546">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1609868927963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609868730546" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1609868730546">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1609868927963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609868730546" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1609868730548">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1609868927963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609868730548" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1609791889710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609791889710" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1609869057998">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609869057998" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -204,11 +186,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/ClientHandler.java</url>
           <line>116</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ChatApiHandler.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
