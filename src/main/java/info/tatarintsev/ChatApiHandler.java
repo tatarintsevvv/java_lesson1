@@ -1,4 +1,4 @@
-//package info.tatarintsev;
+package info.tatarintsev;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

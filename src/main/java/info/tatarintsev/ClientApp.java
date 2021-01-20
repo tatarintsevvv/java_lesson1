@@ -1,4 +1,4 @@
-//package info.tatarintsev;
+package info.tatarintsev;
 
 public class ClientApp implements
         ClientSignInWindow.Callback,

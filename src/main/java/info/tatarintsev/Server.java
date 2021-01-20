@@ -1,34 +1,31 @@
-//package info.tatarintsev;
+package info.tatarintsev;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.SocketException;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 class Server {
 
     List<ClientHandler> clients = new ArrayList<>();
-    Map<String, List<Message>> chats = new HashMap<>();
+    Map<String, List<Message>> messages = new HashMap<>();
+    private ExecutorService executorService;
 
     Server() {
-        try {
-            ServerSocket serverSocket = new ServerSocket(8082);
+        try (ServerSocket serverSocket = new ServerSocket(8082);) {
             AuthService authService = new AuthService();
+            executorService = Executors.newCachedThreadPool();
             // Обработчик клиентов
             while (true) {
                 Socket socket = serverSocket.accept();
                 ClientHandler clientHandler = new ClientHandler(authService, this, socket);
-                Thread thread1 = new Thread(clientHandler);
-                thread1.start();
-                //                new Thread(() -> {
-//                    clientHandler
-//                    ClientHandler clientHandler = new ClientHandler(authService, this, socket);
-//                }).start();
+                executorService.submit(new ClientRunnable(clientHandler));
             }
         } catch (SocketException e) {
             System.out.println("Ошибка сокета");
@@ -36,6 +33,8 @@ class Server {
         } catch (IOException e) {
             System.out.println("Сервер прекратил работу с ошибкой");
             e.printStackTrace();
+        } finally {
+            executorService.shutdown();
         }
     }
 
@@ -57,13 +56,14 @@ class Server {
             key = recipientLogin + senderLogin;
         }
         // Проверяем создан ли чат и если нет то создаём
-        if (!chats.containsKey(key)) {
+        if (!messages.containsKey(key)) {
             // Создаём список сообщений для чата
-            chats.put(key, new ArrayList());
+            messages.put(key, new ArrayList());
         }
-        // Сохраняем сообщение в чат
-        chats.get(key).add(new Message(sender, text));
+        // Сохраняем сообщение в чат,
+        messages.get(key).add(new BroadcastMessage(sender, text));
         // Ищем получателя среди клиентов
+        /*
         ClientHandler recipient = null;
         for (int i = 0; i < clients.size(); i++) {
             ClientHandler client = clients.get(i);
@@ -71,13 +71,7 @@ class Server {
                 recipient = client;
             }
         }
-        // Если получатель онлайн то отправляем ему сообщение
-        if (recipient != null) {
-            recipient.sendMessage(sender, text);
-            System.out.println("Отправлено сообщение для " + recipientLogin);
-        } else {
-            System.out.println("Получатель не найден " + recipientLogin);
-        }
+         */
     }
 
     synchronized void onNewClient(ClientHandler clientHandler) {

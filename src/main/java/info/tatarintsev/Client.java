@@ -1,4 +1,4 @@
-//package info.tatarintsev;
+package info.tatarintsev;
 
 class Client {
     String name;

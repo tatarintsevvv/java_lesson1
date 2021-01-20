@@ -1,4 +1,4 @@
-//package info.tatarintsev;
+package info.tatarintsev;
 
 import javax.swing.*;
 import java.awt.*;

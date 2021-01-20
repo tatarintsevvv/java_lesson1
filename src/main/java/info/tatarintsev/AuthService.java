@@ -1,8 +1,6 @@
-//package info.tatarintsev;
+package info.tatarintsev;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 class AuthService {
 

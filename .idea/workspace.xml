@@ -23,12 +23,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f761f61b-0e3f-4dde-bbd7-4fe19c3194c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ABCABCABC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/BroadcastMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/PrivateMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ServiceMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ServicePrivateMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChatApiHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ChatApiHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientChatWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientChatWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClientSignInWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientSignInWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ChatApiHandler$Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ChatApiHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientChatWindow$Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientChatWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientSignInWindow$Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClientSignInWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,13 +85,32 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/info/tatarintsev" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson1/src/ru/geekbrains/Main.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Application.ClientApp">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="info.tatarintsev" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ABCABCABC">
+    <configuration name="ABCABCABC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="info.tatarintsev.ABCABCABC" />
+      <module name="GeekBrainsTasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="info.tatarintsev.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClientApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ClientApp" />
       <module name="GeekBrainsTasks" />
@@ -79,6 +134,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ABCABCABC" />
         <item itemvalue="Application.ClientApp" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Server (1)" />
@@ -101,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609869042509</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2 задание - поправки к сетевому чату">
+      <created>1609869292053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609869292053</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,26 +192,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1609789569452" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1611089777750">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1611089777750" />
+    <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1611121754461">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1611121754461" />
+    <state x="387" y="140" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611121093098">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="387" y="140" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1611121093098" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1609841684215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609841684215" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1609868941529">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1611122114684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609868941529" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1609868941528">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1611122114684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609868941528" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1609868941528">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1611122114684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609868941528" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1609868941529">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1611122114684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609868941529" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1609868927963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -169,25 +244,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609791889710" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1609869057998">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1609869293748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609869057998" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ClientHandler.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ClientHandler.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609869293748" />
+    <state x="499" y="141" key="chooseDestDirectoryDialog" timestamp="1611121754367">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="499" y="141" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1611121754367" />
   </component>
 </project>
