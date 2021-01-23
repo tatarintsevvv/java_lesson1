@@ -2,6 +2,8 @@ package info.tatarintsev;
 
 import java.sql.*;
 
+import static info.tatarintsev.Server.userLogger;
+
 class AuthService {
 
     AuthService() {
@@ -24,10 +26,9 @@ class AuthService {
 
             connection.close();
         } catch (ClassNotFoundException e) {
-            System.out.println("Не найден дравер SQLite");
-            e.printStackTrace();
+            userLogger.error("Не найден дравер SQLite");
         } catch (SQLException e) {
-            System.out.println("Can't get connection. Incorrect URL");
+            userLogger.error("Can't get connection. Incorrect URL");
             e.printStackTrace();
         }
 

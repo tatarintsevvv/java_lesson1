@@ -1,9 +1,14 @@
 package info.tatarintsev;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ClientApp implements
         ClientSignInWindow.Callback,
         ClientChatWindow.Callback,
         ChatApiHandler.Callback {
+    static final Logger rootClientLogger = LogManager.getRootLogger();
+    static final Logger userClientLogger = LogManager.getLogger(ClientApp.class);
 
     ChatApiHandler api;
     final ClientSignInWindow clientSignInWindow;
@@ -27,7 +32,7 @@ public class ClientApp implements
 
     @Override
     public synchronized void onAuth(boolean isSuccess, String serverError) {
-        System.out.println("login: " + isSuccess);
+        userClientLogger.info("login: " + isSuccess);
         if (isSuccess) {
             hideSignInWindow();
             showChatWindow();

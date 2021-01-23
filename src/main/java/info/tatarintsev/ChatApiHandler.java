@@ -9,6 +9,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
+import static info.tatarintsev.ClientApp.userClientLogger;
 
 public class ChatApiHandler {
 
@@ -39,9 +40,9 @@ public class ChatApiHandler {
                     while (true) {
                         String newMessage = dataInputStream.readUTF();
                         if (newMessage.startsWith("/auth")) {
-                            System.out.println(newMessage);
+                            userClientLogger.info(newMessage);
                             if (newMessage.equals("/auth ok")) {
-                                System.out.println("response success");
+                                userClientLogger.info("response success");
                                 callback.onAuth(true, null);
                             } else {
                                 callback.onAuth(false, newMessage);
@@ -71,10 +72,10 @@ public class ChatApiHandler {
         new Thread(() -> {
             try {
                 String command = "/auth " + login + " " + password;
-                System.out.println(command);
+                userClientLogger.info(command);
                 dataOutputStream.writeUTF(command);
             } catch (IOException e) {
-                System.out.println("response exception");
+                userClientLogger.error("response exception");
                 callback.onAuth(false, null);
             }
         }).start();

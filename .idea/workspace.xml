@@ -23,36 +23,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f761f61b-0e3f-4dde-bbd7-4fe19c3194c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ABCABCABC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/BroadcastMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/PrivateMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ServiceMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ServicePrivateMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/EmptyAfter4Exception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/SecondTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ThirdTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SecondTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/info/tatarintsev/ThirdTaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChatApiHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ChatApiHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClientChatWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientChatWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClientSignInWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientSignInWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AuthService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ChatApiHandler$Callback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ChatApiHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientChatWindow$Callback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientChatWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientSignInWindow$Callback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClientSignInWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ABCABCABC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/BroadcastMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/BroadcastMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ChatApiHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ChatApiHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/PrivateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/PrivateMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ServicePrivateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/info/tatarintsev/ServicePrivateMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ABCABCABC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/BroadcastMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/BroadcastMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ChatApiHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ChatApiHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientChatWindow$Callback.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientChatWindow$Callback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientChatWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientChatWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientSignInWindow$Callback.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientSignInWindow$Callback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientSignInWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ClientSignInWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/PrivateMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/PrivateMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ServiceMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ServiceMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/info/tatarintsev/ServicePrivateMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/info/tatarintsev/ServicePrivateMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +71,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -85,21 +95,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/info/tatarintsev" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lesson1/src/ru/geekbrains/Main.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="info.tatarintsev" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="info.tatarintsev" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.ABCABCABC">
-    <configuration name="ABCABCABC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="info.tatarintsev.ABCABCABC" />
+  <component name="RunManager" selected="JUnit.ThirdTaskTest.check1and4InArray_test_exists">
+    <configuration name="SecondTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GeekBrainsTasks" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SecondTaskTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecondTaskTest.secondTask_run_checkResultArray (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GeekBrainsTasks" />
       <extension name="coverage">
         <pattern>
@@ -107,37 +133,63 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="info.tatarintsev.SecondTaskTest" />
+      <option name="METHOD_NAME" value="secondTask_run_checkResultArray" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ClientApp" />
+    <configuration name="SecondTaskTest.secondTask_run_checkResultArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GeekBrainsTasks" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SecondTaskTest" />
+      <option name="METHOD_NAME" value="secondTask_run_checkResultArray" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
+    <configuration name="SecondTaskTest.secondTask_run_expectedRequestedException (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GeekBrainsTasks" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/target/classes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="info.tatarintsev.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="info.tatarintsev.SecondTaskTest" />
+      <option name="METHOD_NAME" value="secondTask_run_expectedRequestedException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThirdTaskTest.check1and4InArray_test_exists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GeekBrainsTasks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="info.tatarintsev.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="info.tatarintsev" />
+      <option name="MAIN_CLASS_NAME" value="info.tatarintsev.ThirdTaskTest" />
+      <option name="METHOD_NAME" value="check1and4InArray_test_exists" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ABCABCABC" />
-        <item itemvalue="Application.ClientApp" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Server (1)" />
+        <item itemvalue="JUnit.ThirdTaskTest.check1and4InArray_test_exists" />
+        <item itemvalue="JUnit.SecondTaskTest" />
+        <item itemvalue="JUnit.SecondTaskTest.secondTask_run_checkResultArray" />
+        <item itemvalue="JUnit.SecondTaskTest.secondTask_run_checkResultArray (1)" />
+        <item itemvalue="JUnit.SecondTaskTest.secondTask_run_expectedRequestedException (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609869292053</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Исправления чата">
+      <created>1611122675745</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611122675745</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,76 +240,93 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2 задание - поправки к сетевому чату" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 задание - поправки к сетевому чату" />
+    <MESSAGE value="Исправления чата" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправления чата" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1609788166855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1609788166855" />
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1611340997798">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1611340997798" />
     <state x="429" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609789569452">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="429" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1609789569452" />
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1611089777750">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1611259204297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1611089777750" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1611259204297" />
     <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1611121754461">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1611121754461" />
-    <state x="387" y="140" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611121093098">
+    <state x="387" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611252274128">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="387" y="140" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1611121093098" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1609841684215">
+    <state x="387" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1611252274128" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1611392218559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609841684215" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1611122114684">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611392218559" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1611391979160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1611122114684">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611391979160" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1611391979159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1611122114684">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611391979158" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1611391979157">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1611122114684">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611391979157" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1611391979159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611122114684" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1609868927963">
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611391979159" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1611391979164">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1609868927963">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611391979164" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1611391979162">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1609868927963">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1611391979162" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1611391979161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1609868927963">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1611391979161" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1611391979163">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609868927963" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1611391979163" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1609791889710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609791889710" />
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1609869293748">
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1611122681966">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609869293748" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1611122681966" />
     <state x="499" y="141" key="chooseDestDirectoryDialog" timestamp="1611121754367">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="499" y="141" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1611121754367" />
+    <state x="454" y="185" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1611346821605">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="185" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1611346821605" />
+    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1611319288085">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1611319288085" />
+    <state x="479" y="111" key="refactoring.ChangeSignatureDialog" timestamp="1611252869333">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1611252869333" />
   </component>
 </project>
